@@ -1,0 +1,25 @@
+{
+    "configurations": [
+        {
+            "type": "java",
+            "name": "CodeLens (Launch) - interfaz",
+            "request": "launch",
+            "mainClass": "com.producto.interfaz.interfaz",
+            "projectName": "JerseyHibernateApp"
+        },
+        {
+            "type": "java",
+            "name": "CodeLens (Launch) - interfaz",
+            "request": "launch",
+            "mainClass": "com.interfaz.interfaz",
+            "projectName": "JerseyHibernateApp"
+        },
+        {
+            "type": "java",
+            "name": "CodeLens (Launch) - interfaz",
+            "request": "launch",
+            "mainClass": "com.topjavatutorial.interfaz.interfaz",
+            "projectName": "JerseyHibernateApp"
+        }
+    ]
+}

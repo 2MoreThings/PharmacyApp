@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE hibernate-configuration PUBLIC "-//Hibernate/Hibernate Configuration DTD 3.0//EN"
+                                         "http://hibernate.sourceforge.net/hibernate-configuration-3.0.dtd">
+<hibernate-configuration>
+ <session-factory name="hibernateSessionFactory">
+   <!-- La persistencia se apoya en mysql.
+        para instalarlo se tiene que ejecutar:
+
+        sudo apt install mysql-server
+        sudo mysql_secure_installation 
+        sudo mysql -u root -p
+        mysql: CREATE DATABASE practica41;
+        mysql: USE practica41;
+        mysql: CREATE USER 'antmordhar'@'localhost' IDENTIFIED BY '12397AMdH';
+        mysql: GRANT ALL PRIVILEGES ON *.* TO 'antmordhar'@'localhost' WITH GRANT OPTION;
+        
+
+
+        -->
+  <property name="hibernate.connection.driver_class">com.mysql.jdbc.Driver</property>
+  <!-- Aquí hay que poner la url de nuestra base de datos, por defecto el puerto es el 3306 
+    por lo que solo habra que cambian el nombre de la db(practica2) por otro si fuera necesario-->
+  <property name="hibernate.connection.url">jdbc:mysql://localhost:3306/practica4carro</property>
+  <!-- Nombre de nuestro usuario de mysql -->
+  <property name="hibernate.connection.username">antmordhar</property>
+  <!-- Contraseña de nuestro usuario de mysql -->
+  <property name="hibernate.connection.password">12397AMdH</property>
+  <property name="hibernate.dialect">org.hibernate.dialect.MySQLDialect</property>
+  <property name="hibernate.show_sql">true</property>
+  <property name="hibernate.format_sql">true</property>
+<!-- IMPORTANTE: Esto destruye y crea la tabla, poner solo si no la hemos creado -->
+  <property name="hibernate.hbm2ddl.auto">create-drop</property>
+  <mapping class="com.carro.dao.ProductoCarro"/>
+ </session-factory>
+</hibernate-configuration>

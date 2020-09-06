@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" 
+"http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml"   
+	xmlns:h="http://java.sun.com/jsf/html"
+	xmlns:f="http://java.sun.com/jsf/core">
+
+<style>
+table, th, td {
+  border: 1px solid black;
+  border-collapse: collapse;
+}
+th {
+  text-align: left;
+}
+</style>
+	
+	<h:head>
+		<title>Productos</title>
+	</h:head>
+
+	<h:body>
+		<p>Productos</p>
+		
+		<h:outputText value="#{ClienteAppWeb.tabla}" escape="false"/>
+		<p>Visualizacion</p>
+		<p>Dime la categoría.(Vacio muestra todas)</p>
+		<h:form>
+			<h:inputText binding="#{input5}"></h:inputText>
+			<h:commandButton
+				id= "Boton2"
+				value= "Categoria"
+				action= "#{ClienteAppWeb.getProductos(input5.value)}"/>
+		</h:form>
+		<p>Insertar Producto</p>
+		<p>Dime el nombre,Categoria y Precio</p>
+		<h:form>
+			<h:inputText binding="#{input1}"></h:inputText>
+			<br/> 
+			<h:inputText binding="#{input2}"></h:inputText>
+			<br/> 
+			<h:inputText binding="#{input3}"></h:inputText>
+			<br/> 
+			<h:commandButton
+				id= "Boton1"
+				value= "Insertar"
+				action= "#{ClienteAppWeb.addProducto(input1.value,input2.value,input3.value)}"/>
+		</h:form>
+		<p>Eliminar producto</p>
+		<p>Dime su id</p>
+		<h:form>
+			<h:inputText binding="#{input4}"></h:inputText>
+			<h:commandButton
+				id= "Boton2"
+				value= "Eliminar"
+				action= "#{ClienteAppWeb.deleteProducto(input4.value)}"/>
+		</h:form>
+	</h:body>
+</html>

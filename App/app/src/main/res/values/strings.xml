@@ -1,0 +1,5 @@
+<resources>
+    <string name="app_name">TwoMoreThing</string>
+    <string name="app_farmacia">App Farmacia</string>
+    <string name="to_activity_home">To activity Home</string>
+</resources>
